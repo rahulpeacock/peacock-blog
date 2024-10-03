@@ -1,13 +1,8 @@
 import { source } from '@/app/source';
-import type { Metadata } from 'next';
-import {
-  DocsPage,
-  DocsBody,
-  DocsDescription,
-  DocsTitle,
-} from 'fumadocs-ui/page';
-import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export default async function Page({
   params,
@@ -15,6 +10,7 @@ export default async function Page({
   params: { slug?: string[] };
 }) {
   const page = source.getPage(params.slug);
+  console.log(params.slug);
   if (!page) notFound();
 
   console.log(page);
