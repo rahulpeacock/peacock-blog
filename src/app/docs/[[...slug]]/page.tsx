@@ -10,7 +10,7 @@ export default async function Page({
   params: { slug?: string[] };
 }) {
   const page = source.getPage(params.slug);
-  console.log(params.slug);
+  console.log(source);
   if (!page) notFound();
 
   console.log(page);

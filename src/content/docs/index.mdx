@@ -6,10 +6,24 @@ date: Sep 7, 2024
 
 Welcome to the docs! You can start writing documents in `/content/docs`.
 
-```js
-const greeting = 'Hello World';
+```tsx
+<div>Hello World</div>  // [\!code highlight:2]
+<div>Hello World</div>
+<div>Goodbye</div>
+<div>Hello World</div>
+```
 
-console.log('Hello World');
+```js
+// [\!code word:config]
+const config = {
+  reactStrictMode: true,
+};
+```
+
+```js title="script.js"
+const greeting = 'Hello World'; // [\!code highlight]
+
+console.log('Hello World!!!');
 ```
 
 ## What is Next?
