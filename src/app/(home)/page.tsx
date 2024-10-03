@@ -1,16 +1,20 @@
-import Link from 'next/link';
+import { AllBlogs } from './_components';
 
 export default function Page() {
   return (
-    <main className='flex h-screen flex-col justify-center text-center'>
-      <h1 className='mb-4 text-2xl font-bold'>Hello World</h1>
-      <p className='text-fd-muted-foreground'>
-        You can open{' '}
-        <Link href='/docs' className='text-fd-foreground font-semibold underline'>
-          /docs
-        </Link>{' '}
-        and see the documentation.
-      </p>
+    <main>
+      <section className='min-h-screen flex items-start justify-center pt-32 pb-16'>
+        <div className='py-8 px-4'>
+          <div className='text-center'>
+            <h2 className='uppercase font-bold'>Rahul Palamarthi v25.01</h2>
+            <p className='leading-none'>&nbsp;</p>
+            <p>software developer. open source contributor.</p>
+            <p className='leading-none'>&nbsp;</p>
+            <p className='leading-none'>&nbsp;</p>
+          </div>
+          <AllBlogs />
+        </div>
+      </section>
     </main>
   );
 }
