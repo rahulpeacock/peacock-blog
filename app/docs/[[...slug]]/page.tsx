@@ -17,6 +17,8 @@ export default async function Page({
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  console.log(page);
+
   const MDX = page.data.body;
 
   return (
