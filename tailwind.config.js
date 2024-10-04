@@ -32,8 +32,19 @@ export default {
           bred: '#ff9e64',
           bwhite: '#787c99',
           byellow: '#e0af68',
+          ghyellow: '#d29922',
         },
+      },
+      keyframes: {
+        blink: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+      },
+      animation: {
+        'hover-blink': 'blink 0.6s steps(2, jump-none) infinite',
       },
     },
   },
+  plugins: [require('tailwindcss-animate')],
 };

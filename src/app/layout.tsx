@@ -22,7 +22,11 @@ const commitMono = localFont({
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang='en' className='dark' style={{ colorScheme: 'dark' }} suppressHydrationWarning>
-      <body className={`${commitMono.className}`}>{children}</body>
+      <body
+        className={`${commitMono.className} bg-[url('data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='10' height='20'><text x='0' y='16' fill='%23C6D1F1' font-family='CommitMono'>~</text></svg>')]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

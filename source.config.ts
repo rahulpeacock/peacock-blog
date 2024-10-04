@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 export const { docs, meta } = defineDocs({
   docs: {
-    dir: './src/content/docs',
+    dir: './src/content/blog',
     schema: frontmatterSchema.extend({
       date: z.string(),
     }),

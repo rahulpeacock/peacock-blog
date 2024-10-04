@@ -5,5 +5,7 @@
 @layer base {
   body {
     @apply bg-tokyo-background text-tokyo-foreground;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='10' height='20'><text x='0' y='16' fill='%23a9b1d6' font-family='CommitMono'>~</text></svg>");
+    background-repeat: repeat-y;
   }
 }

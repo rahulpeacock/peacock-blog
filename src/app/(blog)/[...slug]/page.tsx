@@ -1,6 +1,6 @@
 import { source } from '@/app/source';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
+import {} from 'fumadocs-ui/page';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -10,7 +10,7 @@ export default async function Page({
   params: { slug?: string[] };
 }) {
   const page = source.getPage(params.slug);
-  console.log(source);
+  console.log(source.generateParams());
   if (!page) notFound();
 
   console.log(page);
@@ -18,13 +18,9 @@ export default async function Page({
   const MDX = page.data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
-      <DocsBody>
-        <MDX components={{ ...defaultMdxComponents }} />
-      </DocsBody>
-    </DocsPage>
+    <div>
+      <MDX components={{ ...defaultMdxComponents }} />
+    </div>
   );
 }
 
